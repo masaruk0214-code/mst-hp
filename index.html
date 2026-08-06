@@ -461,6 +461,32 @@
     display:block;
   }
 
+  /* Product spotlight */
+  .product{ background:var(--panel); }
+  .product-grid{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:1.5rem;
+    max-width:38em;
+  }
+  .product-lede{ color:var(--text-muted); font-size:1.03rem; line-height:2; }
+  .product-features{
+    list-style:none;
+    margin:0; padding:0;
+    display:flex; flex-wrap:wrap;
+    gap:0.7rem;
+  }
+  .product-features li{
+    background:var(--card-bg);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:0.55rem 1.2rem;
+    font-size:0.88rem;
+    font-weight:700;
+    color:var(--teal-600);
+  }
+
   /* Philosophy strip */
   .philosophy{
     background:var(--panel);
@@ -627,6 +653,7 @@ vryALuOa6TxxvnvdHJpEVRGRolPNco0sOwe0zWg8oo6L4CQsSaHv8Pa83x+DggbcYAAAAASUVORK5CYI
       <a href="#about">会社概要</a>
       <a href="#business">事業内容</a>
       <a href="#ai-dx">AI × DX</a>
+      <a href="#product">商品</a>
       <a href="#philosophy">私たちの考え方</a>
       <a href="#contact">お問い合わせ</a>
     </nav>
@@ -5073,6 +5100,27 @@ XQV0U9zGZoooBpuq3EltppeH5SxC5HoakXrVXW/+QX/AMDWu56Qlbscy1nFPucf2pynmk7Uq9TXjnpEo
 ITNBJHSg0NQMdnnFJn+dH8VJ6fWgBQc8UlA60UAhD6U3tTu5pvakUIDzSZoHWigBwJpCf50Cg/1oYCUhpTSGpGgzxTjTR92nHrQIQUoPGaQUDpQANSNStSN0pMaDFNNPNMPWhAg7UvQUnalPSmNDDwc0hpzU1utJgAoJoWg9KXQYhNLmkNFIB6jIzTttInSn1QH/9k="
  alt="AIによるデータ分析・対話・自動化のイメージ" loading="lazy" />
         </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="product" id="product">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Product</p>
+        <h2>AUTOMATION CONTENTS<sup>®</sup></h2>
+      </div>
+      <div class="product-grid reveal">
+        <p class="product-lede">
+          複数のAIを組み合わせて、動画コンテンツ・LP（ランディングページ）・Meta広告コンテンツの
+          制作を自動化する、MSTのオリジナルサービスです。
+        </p>
+        <ul class="product-features">
+          <li>動画コンテンツ作成</li>
+          <li>LP作成</li>
+          <li>Meta広告コンテンツ作成</li>
+        </ul>
+        <a class="btn btn-primary" href="https://utage-system.com/p/JsJF066fzXWL" target="_blank" rel="noopener">AUTOMATION CONTENTS&reg;の詳細を見る</a>
       </div>
     </div>
   </section>
