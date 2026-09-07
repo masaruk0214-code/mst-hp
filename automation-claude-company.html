@@ -354,6 +354,92 @@
     .solution-card{padding:32px 24px;flex-direction:column;gap:16px}
   }
 
+  /* ---------- Intro video ---------- */
+  .video-frame{
+    max-width:900px;
+    margin:0 auto;
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:var(--shadow-md);
+    background:#000;
+  }
+  .video-frame video{
+    width:100%;
+    display:block;
+  }
+
+  /* ---------- Mechanism (具体的な仕組み) ---------- */
+  .mechanism-lede{
+    font-size:16px;
+    color:var(--muted);
+    line-height:1.85;
+    max-width:760px;
+    margin:0 0 32px;
+  }
+  .folder-tree{
+    background:#1F2937;
+    color:#F9FAFB;
+    border-radius:var(--radius);
+    padding:28px 32px;
+    overflow-x:auto;
+    margin-bottom:32px;
+  }
+  .folder-tree pre{
+    margin:0;
+    font-family:"SF Mono","Menlo","Consolas",monospace;
+    font-size:14px;
+    line-height:1.9;
+    white-space:pre;
+  }
+  .mechanism-files{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-bottom:28px;
+  }
+  .mechanism-file{
+    background:var(--orange-50);
+    border-radius:var(--radius);
+    padding:20px;
+  }
+  .mechanism-file strong{
+    display:block;
+    font-family:"SF Mono","Menlo","Consolas",monospace;
+    color:var(--orange-700);
+    font-size:15px;
+    margin-bottom:6px;
+  }
+  .mechanism-file span{
+    font-size:13px;
+    color:var(--muted);
+    line-height:1.6;
+  }
+  .mechanism-note{
+    border-left:3px solid var(--orange-500);
+    background:var(--orange-50);
+    border-radius:0 var(--radius) var(--radius) 0;
+    padding:16px 20px;
+    font-size:14px;
+    color:var(--muted);
+    line-height:1.8;
+    margin-bottom:32px;
+  }
+  .mechanism-note strong{
+    display:block;
+    color:var(--text);
+    margin-bottom:6px;
+    font-size:13px;
+    letter-spacing:.04em;
+  }
+  .mechanism-why h3{ font-size:18px; margin:0 0 10px; }
+  .mechanism-why p{ font-size:15px; color:var(--muted); line-height:1.85; margin:0; }
+  .mechanism-source{ font-size:12px; color:var(--muted); margin-top:28px; text-align:right; }
+  @media (max-width:768px){
+    .mechanism-files{grid-template-columns:1fr}
+    .folder-tree{padding:20px}
+    .folder-tree pre{font-size:12px}
+  }
+
   /* ---------- Comparison ---------- */
   .compare{background:var(--off)}
   .compare-table{
@@ -791,6 +877,17 @@
   </div>
 </section>
 
+<section id="intro-video">
+  <div class="wrap">
+    <div class="video-frame">
+      <video controls preload="metadata" playsinline>
+        <source src="videos/acc-introduction.mp4" type="video/mp4">
+        お使いのブラウザは動画再生に対応していません。
+      </video>
+    </div>
+  </div>
+</section>
+
 <section class="problems" id="problems">
   <div class="wrap">
     <div class="eyebrow">PROBLEMS</div>
@@ -881,6 +978,57 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="mechanism">
+  <div class="wrap">
+    <div class="eyebrow">HOW IT WORKS</div>
+    <h2 class="section-title">具体的な仕組み</h2>
+    <p class="section-sub">PCの中に「仮想会社」を構築する、実際の運用イメージ</p>
+
+    <p class="mechanism-lede">
+      実際の運用例として、PCの中に「仮想会社」を構築します。以下のようなフォルダ構造を作り、各フォルダ内に claude.md（役割定義）と todo.md（タスク管理）を配置します。
+    </p>
+
+    <div class="folder-tree">
+      <pre>/Virtual-Company
+├── /Secretariat        # 秘書室
+├── /PM                  # プロジェクト管理
+├── /Research            # 調査・分析
+├── /Marketing           # マーケティング
+├── /Finance             # 経理
+├── /Sales               # 営業
+├── /Development         # 開発
+└── /Customer-Success    # 顧客サポート</pre>
+    </div>
+
+    <div class="mechanism-files">
+      <div class="mechanism-file">
+        <strong>claude.md</strong>
+        <span>その部署のAI社員に対する指示書（役割・トーン・対象業務）</span>
+      </div>
+      <div class="mechanism-file">
+        <strong>todo.md</strong>
+        <span>進行中タスク・優先順位・締切</span>
+      </div>
+      <div class="mechanism-file">
+        <strong>log/</strong>
+        <span>実行記録・成果物（任意）</span>
+      </div>
+    </div>
+
+    <div class="mechanism-note">
+      <strong>注記</strong>
+      上記はあくまで実装の一例です。フォルダ名・構造・ルールは自由にカスタマイズ可能です。重要なのは「AIに継続的な文脈を与える仕組み」を整備することであり、必ずしもこの形そのままでなければならないわけではありません。
+    </div>
+
+    <div class="mechanism-why">
+      <h3>なぜ「フォルダ」が重要なのか</h3>
+      <p>通常のチャット型AIとの大きな違いは、記憶の保持です。チャットは基本的にセッションが終わるとリセットされますが、フォルダとファイルは永続的に残ります。これを「会社の記憶装置」として活用することで、AIは毎回ゼロから説明される必要がなくなります。</p>
+    </div>
+
+    <p class="mechanism-source">出典：Claude一人企業＿完全ガイドレポート「1.2 具体的な仕組み」</p>
   </div>
 </section>
 

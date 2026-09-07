@@ -231,6 +231,18 @@
     object-fit:cover;
     display:block;
   }
+  .video-frame{
+    max-width:900px;
+    margin:0 auto;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:var(--card-shadow);
+    background:#000;
+  }
+  .video-frame video{
+    width:100%;
+    display:block;
+  }
   .hero-visual{
     max-width:1040px;
     aspect-ratio:1600/1066;
@@ -3107,6 +3119,21 @@ XQV0U9zGZoooBpuq3EltppeH5SxC5HoakXrVXW/+QX/AMDWu56Qlbscy1nFPucf2pynmk7Uq9TXjnpEo
 ITNBJHSg0NQMdnnFJn+dH8VJ6fWgBQc8UlA60UAhD6U3tTu5pvakUIDzSZoHWigBwJpCf50Cg/1oYCUhpTSGpGgzxTjTR92nHrQIQUoPGaQUDpQANSNStSN0pMaDFNNPNMPWhAg7UvQUnalPSmNDDwc0hpzU1utJgAoJoWg9KXQYhNLmkNFIB6jIzTttInSn1QH/9k="
  alt="AIによるデータ分析・対話・自動化のイメージ" loading="lazy" />
         </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="ai-video" id="ai-video">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Video</p>
+        <h2>AIって、結局どんな存在？</h2>
+      </div>
+      <div class="video-frame reveal">
+        <video controls preload="metadata" playsinline>
+          <source src="videos/ai-tte-donna-sonzai.mp4" type="video/mp4">
+          お使いのブラウザは動画再生に対応していません。
+        </video>
       </div>
     </div>
   </section>
