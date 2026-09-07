@@ -524,6 +524,54 @@
     box-shadow:0 10px 24px -8px rgba(196,80,26,0.5);
   }
 
+  /* Pricing */
+  .pricing-panel{
+    background:var(--ink-900);
+    border-radius:24px;
+    padding:56px 40px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    gap:56px;
+    flex-wrap:wrap;
+  }
+  .pricing-row{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    text-align:center;
+  }
+  .pricing-label{
+    font-size:13px;
+    color:rgba(243,238,223,0.65);
+    letter-spacing:.04em;
+  }
+  .pricing-product{
+    font-size:19px;
+    font-weight:800;
+    color:#F3EEDF;
+    letter-spacing:.01em;
+  }
+  .pricing-price{
+    font-size:32px;
+    font-weight:800;
+    color:var(--teal-500);
+    font-feature-settings:"tnum";
+  }
+  .pricing-divider{
+    width:1px;
+    height:120px;
+    background:var(--sky-500);
+    border:none;
+    margin:0;
+  }
+  @media (max-width:720px){
+    .pricing-panel{ flex-direction:column; gap:32px; padding:40px 28px; }
+    .pricing-divider{ width:64px; height:1px; }
+  }
+
   /* Philosophy strip */
   .philosophy{
     background:var(--panel);
@@ -702,6 +750,7 @@ vryALuOa6TxxvnvdHJpEVRGRolPNco0sOwe0zWg8oo6L4CQsSaHv8Pa83x+DggbcYAAAAASUVORK5CYI
       <a href="#about">会社概要</a>
       <a href="#ai-dx">AI × DX</a>
       <a href="#product">商品</a>
+      <a href="#pricing">料金</a>
       <a href="#philosophy">私たちの考え方</a>
       <a href="#contact">お問い合わせ</a>
     </nav>
@@ -3170,6 +3219,28 @@ ITNBJHSg0NQMdnnFJn+dH8VJ6fWgBQc8UlA60UAhD6U3tTu5pvakUIDzSZoHWigBwJpCf50Cg/1oYCUh
           <li>意思決定の迅速化</li>
         </ul>
         <a class="btn btn-primary" href="automation-claude-company.html" target="_blank" rel="noopener">AUTOMATION CLAUDE COMPANYの詳細を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Pricing</p>
+        <h2>料金</h2>
+      </div>
+      <div class="pricing-panel reveal">
+        <div class="pricing-row">
+          <span class="pricing-label">―外向けのコンテンツを作る―</span>
+          <span class="pricing-product">AUTOMATION CONTENTS<sup>&reg;</sup></span>
+          <span class="pricing-price">55万円</span>
+        </div>
+        <hr class="pricing-divider">
+        <div class="pricing-row">
+          <span class="pricing-label">―社内の業務の仕組みを作る―</span>
+          <span class="pricing-product">AUTOMATION CLAUDE COMPANY</span>
+          <span class="pricing-price">330万円</span>
+        </div>
       </div>
     </div>
   </section>
