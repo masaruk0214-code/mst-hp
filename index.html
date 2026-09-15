@@ -524,17 +524,28 @@
     box-shadow:0 10px 24px -8px rgba(196,80,26,0.5);
   }
 
+  /* AUTOMATION SKY ENGINE — blue brand accent, matching its own page */
+  .product-sky h3{ color:#1E3A8A; }
+  .product-sky .product-features li{
+    color:#2563EB;
+    border-color:rgba(30,58,138,0.25);
+    background:#EFF6FF;
+  }
+  .product-sky .btn-primary{
+    background:linear-gradient(120deg, #1E3A8A, #3B82F6);
+  }
+  .product-sky .btn-primary:hover{
+    background:linear-gradient(120deg, #16296B, #2563EB);
+    box-shadow:0 10px 24px -8px rgba(30,58,138,0.5);
+  }
+
   /* Pricing */
   .pricing-panel{
     background:var(--ink-900);
     border-radius:24px;
-    padding:56px 40px;
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:center;
-    gap:56px;
-    flex-wrap:wrap;
+    padding:56px 24px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
   }
   .pricing-row{
     display:flex;
@@ -542,7 +553,10 @@
     align-items:center;
     gap:10px;
     text-align:center;
+    padding:0 20px;
+    border-left:1px solid var(--sky-500);
   }
+  .pricing-row:first-child{ border-left:none; }
   .pricing-label{
     font-size:13px;
     color:rgba(243,238,223,0.65);
@@ -568,8 +582,9 @@
     margin:0;
   }
   @media (max-width:720px){
-    .pricing-panel{ flex-direction:column; gap:32px; padding:40px 28px; }
-    .pricing-divider{ width:64px; height:1px; }
+    .pricing-panel{ grid-template-columns:1fr; gap:32px; padding:40px 28px; }
+    .pricing-row{ border-left:none; padding:0; }
+    .pricing-row:not(:first-child){ border-top:1px solid var(--sky-500); padding-top:32px; }
   }
 
   /* Philosophy strip */
@@ -3220,6 +3235,19 @@ ITNBJHSg0NQMdnnFJn+dH8VJ6fWgBQc8UlA60UAhD6U3tTu5pvakUIDzSZoHWigBwJpCf50Cg/1oYCUh
         </ul>
         <a class="btn btn-primary" href="automation-claude-company.html" target="_blank" rel="noopener">AUTOMATION CLAUDE COMPANYの詳細を見る</a>
       </div>
+      <div class="product-grid product-sky reveal">
+        <h3>AUTOMATION SKY ENGINE</h3>
+        <p class="product-lede">
+          集客から決済までを完全自動化し、収益アップを実現する仕組み化プログラム。「３つの柱と７つの武器」というメソッドで、スクール運営・コーチ業・コンサル業の売上を仕組みにします。
+        </p>
+        <ul class="product-features">
+          <li>集客の自動化</li>
+          <li>決済の自動化</li>
+          <li>3つの柱と7つの武器</li>
+          <li>収益アップ支援</li>
+        </ul>
+        <a class="btn btn-primary" href="automation-sky-engine.html" target="_blank" rel="noopener">AUTOMATION SKY ENGINEの詳細を見る</a>
+      </div>
     </div>
   </section>
 
@@ -3235,11 +3263,15 @@ ITNBJHSg0NQMdnnFJn+dH8VJ6fWgBQc8UlA60UAhD6U3tTu5pvakUIDzSZoHWigBwJpCf50Cg/1oYCUh
           <span class="pricing-product">AUTOMATION CONTENTS<sup>&reg;</sup></span>
           <span class="pricing-price">55万円</span>
         </div>
-        <hr class="pricing-divider">
         <div class="pricing-row">
           <span class="pricing-label">―社内の業務の仕組みを作る―</span>
           <span class="pricing-product">AUTOMATION CLAUDE COMPANY</span>
           <span class="pricing-price">330万円</span>
+        </div>
+        <div class="pricing-row">
+          <span class="pricing-label">―集客から決済までを自動化し、収益アップする―</span>
+          <span class="pricing-product">AUTOMATION SKY ENGINE</span>
+          <span class="pricing-price">27,500円〜<span style="font-size:16px;">/月</span></span>
         </div>
       </div>
     </div>
